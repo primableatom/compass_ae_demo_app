@@ -15,7 +15,6 @@ Ext.define("Compass.ErpApp.Desktop.Applications.StockFinderApp",{
     var win = desktop.getWindow('stock_finder_app');
     if(!win){
       var stockList = createStockList();
-      window.stockList = stockList;
       win = desktop.createWindow({
         id: 'stock_finder_app',
         title:'Stock Finder App',
