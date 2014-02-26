@@ -71,6 +71,7 @@ function createStockFinderForm(stockList) {
         if (form.isValid()) {
           form.submit({
             success: function(form, action) {
+              stockList.store.loadData([],false);
               Ext.each(action.result.data, function(stock, index){
                 stockList.store.add(stock);
               });
