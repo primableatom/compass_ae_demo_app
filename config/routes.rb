@@ -1,4 +1,11 @@
 CompassAeApp::Application.routes.draw do
+
+  post 'erp_app/desktop/stock_finder_app/base/stock_details'
+  
+  match '/erp_app/desktop/stock_finder_app(/:action)' => "erp_app/desktop/stock_finder_app/base"
+
+  match '/erp_app/desktop/example_app(/:action)' => "erp_app/desktop/example_app/base"
+
   #mount CompassAE engines
   ErpBaseErpSvcs.mount_compass_ae_engines(self)
   # The priority is based upon order of creation:

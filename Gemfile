@@ -38,11 +38,14 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 gem 'capistrano', :git => "https://github.com/capistrano/capistrano.git", :branch => :master
+gem "yahoofinance"
 
 group :development do
   gem "thin"
   gem "mailcatcher"
+  gem "railroady"
 end
+
 
 path './lib/compass_agile_enterprise' do
   gem 'erp_base_erp_svcs'
