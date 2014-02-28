@@ -1,5 +1,9 @@
 CompassAeApp::Application.routes.draw do
 
+  match '/erp_app/organizer/stock_finder(/:action)' => "erp_app/organizer/stock_finder/base"
+
+  match '/erp_app/desktop/stock_ticker(/:action)' => "erp_app/desktop/stock_ticker/base"
+
   post 'erp_app/desktop/stock_finder_app/base/stock_details'
   
   match '/erp_app/desktop/stock_finder_app(/:action)' => "erp_app/desktop/stock_finder_app/base"
