@@ -1,0 +1,11 @@
+$(".stocks #results").html("");
+<% @stock_details.each do |stock| %>
+  $(".stocks #results").append("<tr>"+
+                             "<td><%= stock[:symbol] %></td>"+
+                             "<td><%= stock[:company] %></td>"+
+                             "<td><%= stock[:ask] %></td>"+
+                             "<td><%= stock[:change_points] %></td>"+
+                             "<td><%= stock[:change_percent] %></td>"+
+                             "<td><%= stock[:last_update] %></td>"+
+                             "</tr>");                       
+<% end %>
