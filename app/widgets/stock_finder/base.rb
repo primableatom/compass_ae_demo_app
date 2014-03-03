@@ -32,9 +32,7 @@ module Widgets
       private
       
       def get_stock_details_for(stock_symbols)
-        puts "****************************************"
-        puts stock_symbols.inspect
-        last_update = Time.now
+        last_update = Time.now.strftime('%m/%d/%Y %H:%M:%S')
         non_whitespaced_stock_symbols = stock_symbols.delete(" ")
         stocks_data = YahooFinance.get_quotes(YahooFinance::StandardQuote, non_whitespaced_stock_symbols)
         non_whitespaced_stock_symbols.split(",").collect do |stock_symbol|
