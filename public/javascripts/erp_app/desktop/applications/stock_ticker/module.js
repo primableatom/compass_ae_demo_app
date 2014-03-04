@@ -25,44 +25,9 @@ Ext.define("Compass.ErpApp.Desktop.Applications.StockTicker", {
                 constrainHeader: true,
                 layout: 'fit',
                 items: [
-                    {
-                        xtype: 'panel',
-                        layout: 'fit',
-                        dockedItems: {
-                            xtype: 'toolbar',
-                            items: [
-                                {
-                                    xtype: 'label',
-                                    text: 'Symobols'
-                                },
-                                {
-                                    xtype: 'textfield',
-                                    width: 200
-                                },
-                                {
-                                    xtype: "button",
-                                    text: 'Search',
-                                    iconCls: 'icon-search',
-                                    handler: function (btn) {
-                                        var grid = btn.up('panel').down('shared_dynamiceditablegridloaderpanel').down('shared_dynamiceditablegrid'),
-                                      searchField = btn.up('panel').down('textfield');
-                                      window.stock_details = searchField.getValue();
-                                        grid.getStore().load({params:{symbols:searchField.getValue()}});
-                                    }
-                                }
-                            ]
-                        },
-                        items: [
-                            {
-                                xtype: 'shared_dynamiceditablegridloaderpanel',
-                                editable: false,
-                                title: 'Stocks',
-                                setupUrl: '/erp_app/desktop/stock_ticker/setup/',
-                                dataUrl: '/erp_app/desktop/stock_ticker/data/',
-                                page: false
-                            }
-                        ]
-                    }
+                  {
+                    xtype: 'shared_stocksgrid'
+                  }
                 ]
             });
         }

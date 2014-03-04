@@ -4,7 +4,7 @@ module ErpApp
       class BaseController < ::ErpApp::Organizer::BaseController
 
         def menu
-          render :json => [{:text => 'Menu Item', :leaf => true, :iconCls => 'icon-stock', :applicationCardId => "stock_finder_example_panel"}]
+          render :json => [{:text => 'Stock Finder', :leaf => true, :iconCls => 'icon-stock', :applicationCardId => "stock_finder_example_panel"}]
         end
 
       end #BaseController
