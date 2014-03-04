@@ -1,9 +1,13 @@
 <div class="container well">
-  <%= form_tag(build_widget_url(:stock_details), :method => :post, :id=> "stockform", :class => "form-inline", :remote => true) do %>
+  <%= form_tag(build_widget_url(:stock_details), :method => :post, :id=> "stockform", :role => "form", :class => "form-inline", :remote => true) do %>
   <form-group>  
     <%= text_field_tag :stock_symbols %>
   </form-group>
-    <div><%= submit_tag 'Find Stocks', :class => "btn btn-default", :disable_with => "Please wait..." %></div>
+    <form-group>
+    <%= button_tag(:type => "submit", :class => "btn btn-default btn-sm", :data => { :disable_with => "Please wait..." }) do %>
+      <span>Find Stocks</span>
+    <% end %>
+    </form-group>
   <% end %>
   <%= render :partial => "/stocks"%>
 </div>
@@ -17,7 +21,7 @@
      "bInfo": false,
      "bPaginate": false
     });
-    $("#stockform").submit();
+     $("#stockform").submit();
   });
 
   

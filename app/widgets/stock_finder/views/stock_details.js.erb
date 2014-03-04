@@ -4,8 +4,9 @@ $(".stocks #results").html("");
                              "<td><%= stock[:symbol] %></td>"+
                              "<td><%= stock[:company] %></td>"+
                              "<td><%= stock[:ask] %></td>"+
-                             "<td><%= stock[:change_points] %></td>"+
-                             "<td><%= stock[:change_percent] %></td>"+
+                             "<%= escape_javascript decorate(stock[:change_points]) %>"+
+                             "<%= escape_javascript decorate(stock[:change_percentage]) %>"+
                              "<td><%= stock[:last_update] %></td>"+
                              "</tr>");                       
 <% end %>
+
