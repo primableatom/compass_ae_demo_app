@@ -55,7 +55,7 @@ module ErpApp
         quote_symbols = params[:symbols] || "yhoo,goog"
         
         quote_data = []
-        last_update = Time.now
+        last_update = Time.now.strftime('%m/%d/%Y %H:%M:%S')
         quote_type = YahooFinance::StandardQuote
         
         YahooFinance::get_quotes(quote_type, quote_symbols) do |qt|

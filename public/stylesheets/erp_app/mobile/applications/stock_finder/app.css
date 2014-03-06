@@ -1,0 +1,14 @@
+.icon-stock{
+    background-image: url("/images/erp_app/mobile/applications/stock_finder/about_48x48.png");
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+.true{
+    color: green;
+}
+
+.false{
+    color: red;
+}
+
