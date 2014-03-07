@@ -48,8 +48,8 @@ Ext.define('Compass.ErpApp.Mobile.StockFinder.Application', {
           '<div><strong>Company: </strong><span><b>{name}</b></span></div>',
           '<div><strong>Symbol: </strong><span>{symbol}</span></div>',
           '<div><strong>Ask: </strong><span>{ask}</span></div>',
-          '<div><strong>Change: </strong><span class={[parseInt(values.change)>0]}>{change}</span></div>',
-          '<div><strong>Change %: </strong> <span class={[parseInt(values.change)>0]}>{changePercent}</span></div>',
+          '<div><strong>Change: </strong><span class={[parseFloat(values.change)>0]}>{change}</span></div>',
+          '<div><strong>Change %: </strong> <span class={[parseFloat(values.change)>0]}>{changePercent}</span></div>',
           '<div><strong>Last Update: </strong><span>{lastUpdate}</span></div>'
         ]
         
